@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AMB Nails</title>
+
+    <!-- Bootstrap 4 CSS (CDN) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom styles -->
+    <style>
+      :root {
+        --gold:#C9A227;
+        --leaf:#2E7D32;
+        --ink:#1f2937;
+      }
+      body{ color: var(--ink); }
+      .brand-gold{ color: var(--gold) !important; }
+      .bg-gold{ background: var(--gold) !important; color:#fff; }
+      .text-leaf{ color: var(--leaf) !important; }
+      .btn-gold{ background: var(--gold); color:#fff; border:none; }
+      .btn-gold:hover{ filter: brightness(0.9); color:#fff; }
+      .btn-outline-leaf{ border-color: var(--leaf); color: var(--leaf); }
+      .btn-outline-leaf:hover{ background: var(--leaf); color:#fff; }
+      .hero {
+        background: url('https://tse1.mm.bing.net/th/id/OIP.CXNckimoSsDbY4irO5bP1wHaG0?cb=12&pid=Api') center/cover no-repeat;
+        color: white;
+        text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      }
+      .hero-overlay {
+        background: rgba(0,0,0,0.5);
+        padding: 5rem 0;
+      }
+      .service-card{ border: none; box-shadow: 0 12px 24px rgba(0,0,0,0.06); border-radius: .75rem; }
+      .divider { height: 2px; background: linear-gradient(to right, var(--gold), var(--leaf)); opacity:.3; }
+      .footer{ background:#f9fafb; border-top:1px solid rgba(31,41,55,0.08); }
+      .navbar-brand span{ font-weight:700; letter-spacing:.5px; }
+      .rounded-xl{ border-radius: 1rem; }
+      .shadow-soft{ box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+      .form-control:focus{ border-color: var(--leaf); box-shadow: 0 0 0 .2rem rgba(46,125,50,.2); }
+      a{ color: var(--leaf); }
+      a:hover{ color: #215c25; text-decoration:none; }
+      table tr td:first-child{ font-weight:500; }
+      .gallery img{ border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform .3s; }
+      .gallery img:hover{ transform: scale(1.03); }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="mr-2">
+            <circle cx="12" cy="12" r="10" stroke="#2E7D32" stroke-width="2"></circle>
+            <path d="M7 13c3 2 7 2 10 0" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-gold">AMB</span>&nbsp;<span class="text-leaf">Nails</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#prices">Prices</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="btn btn-sm btn-gold ml-lg-3" href="#contact">Book now</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-overlay text-center">
+        <div class="container">
+          <h1 class="display-4 mb-3">Elegance in Every Detail</h1>
+          <p class="lead mb-4">Welcome to <strong>AMB Nails</strong> — where art, care, and nature meet in perfect balance.</p>
+          <a href="#services" class="btn btn-gold btn-lg mr-2">Explore Services</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg">Book an Appointment</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="divider my-5"></div>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="mb-3"><span class="brand-gold">Services</span> Menu</h2>
+          <p class="text-muted mb-0">Signature treatments crafted for durability, shine, and comfort.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card service-card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-leaf">Classic Manicure</h5>
+                <p class="card-text">Nail shaping, cuticle care, light massage, and polish. Clean and timeless.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card service-card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-leaf">Gel / Semi-Permanent</h5>
+                <p class="card-text">High-gloss, long-wear finish with careful nail prep for superior adhesion.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card service-card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-leaf">Nail Art Design</h5>
+                <p class="card-text">Minimal lines, French gradients, or botanical accents — your style, refined.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider my-5"></div>
+
+    <!-- PRICE LIST -->
+    <section id="prices" class="py-5 bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="mb-3"><span class="brand-gold">Price</span> List</h2>
+          <p class="text-muted mb-0">Transparent pricing for every service — no surprises, just perfect nails.</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <table class="table table-bordered shadow-soft">
+              <thead class="bg-gold text-white">
+                <tr><th scope="col">Service</th><th scope="col" class="text-right">Price</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Classic Manicure</td><td class="text-right">€20</td></tr>
+                <tr><td>Gel / Semi-Permanent</td><td class="text-right">€35</td></tr>
+                <tr><td>Nail Art</td><td class="text-right">from €10</td></tr>
+                <tr><td>Removal & Care</td><td class="text-right">€15</td></tr>
+                <tr><td>Spa Manicure</td><td class="text-right">€30</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider my-5"></div>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="mb-3"><span class="brand-gold">Gallery</span></h2>
+          <p class="text-muted mb-0">A glimpse into our artistry and inspiration — every detail matters.</p>
+        </div>
+        <div class="row gallery">
+          <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1602407294553-6f1f2e4f8a47?q=80&w=800" class="img-fluid" alt="Nude nails"></div>
+          <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1616394584738-52e9b96e8f9c?q=80&w=800" class="img-fluid" alt="Nail tools"></div>
+          <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1601047395506-2b03c3e1b1c2?q=80&w=800" class="img-fluid" alt="French manicure"></div>
+          <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1613575691899-5c42e6ca5dc3?q=80&w=800" class="img-fluid" alt="Sparkle nails"></div>
+          <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1598970834798-0c54fe7c0644?q=80&w=800" class="img-fluid" alt="Natural nails"></div>
+          <div class="col-md-4 mb-4"><img src="https://images.unsplash.com/photo-1607083205680-e6a9b9b6c113?q=80&w=800" class="img-fluid" alt="Bright nails"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider my-5"></div>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-5 bg-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="mb-3"><span class="brand-gold">About</span> AMB Nails</h2>
+            <p>We blend artistry with care, focusing on nail health and elegant, wearable design. Every appointment is unrushed, hygienic, and tailored to you.</p>
+            <ul class="mb-4">
+              <li>Medical-grade sanitation & fresh files</li>
+              <li>Cruelty-free, premium products</li>
+              <li>Aftercare tips to keep your nails flawless</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-leaf">Ask a question</a>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="rounded-xl overflow-hidden shadow-soft">
+              <img src="https://images.unsplash.com/photo-1613575691899-5c42e6ca5dc3?q=80&w=1200&auto=format&fit=crop" class="img-fluid" alt="Elegant manicure workspace">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="mb-3"><span class="brand-gold">Book</span> an Appointment</h2>
+          <p class="text-muted mb-0">Send us a message — we’ll get back with available slots.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-7 mb-4 mb-md-0">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name">Full name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="What service are you interested in?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold btn-lg">Send request</button>
+            </form>
+          </div>
+          <div class="col-md-5">
+            <div class="bg-white rounded-xl p-4 shadow-soft h-100">
+              <h5 class="text-leaf">Studio details</h5>
+              <p class="mb-2">AMB Nails Studio<br>123 Elegant Street, London</p>
+              <p class="mb-2">Mon–Sat: 09:00–19:00</p>
+              <p class="mb-0">Email: alinadiac91@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-2 mb-md-0">&copy; <span id="year"></span> AMB Nails. All rights reserved.</p>
+        <div>
+          <a href="#" class="mr-3">Instagram</a>
+          <a href="#" class="mr-3">Facebook</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 4 JS (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
