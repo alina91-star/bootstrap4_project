@@ -15,14 +15,12 @@
         --ink:#1f2937;
       }
 
-      body{ color: var(--ink); }
+      body{ color: var(--ink); font-family: 'Segoe UI', sans-serif; }
       .brand-gold{ color: var(--gold) !important; }
       .bg-gold{ background: var(--gold) !important; color:#fff; }
       .text-leaf{ color: var(--leaf) !important; }
       .btn-gold{ background: var(--gold); color:#fff; border:none; }
       .btn-gold:hover{ filter: brightness(0.9); color:#fff; }
-      .btn-outline-leaf{ border-color: var(--leaf); color: var(--leaf); }
-      .btn-outline-leaf:hover{ background: var(--leaf); color:#fff; }
       .hero {
         background: url('https://tse1.mm.bing.net/th/id/OIP.CXNckimoSsDbY4irO5bP1wHaG0?cb=12&pid=Api') center/cover no-repeat;
         color: white;
@@ -32,7 +30,7 @@
         background: rgba(0,0,0,0.5);
         padding: 5rem 0;
       }
-      .divider { height: 2px; background: linear-gradient(to right, var(--gold), var(--leaf)); opacity:.3; }
+      .divider { height: 2px; background: linear-gradient(to right, var(--gold), var(--leaf)); opacity:.3; margin: 60px 0; }
       .footer{ background:#f9fafb; border-top:1px solid rgba(31,41,55,0.08); }
 
       /* --- Gallery --- */
@@ -82,6 +80,7 @@
         max-width: 90%; max-height: 85%;
         border-radius: 10px;
       }
+
       @media (max-width: 600px) {
         .gallery { grid-template-columns: 1fr; }
         .gallery img { width: 90%; height: auto; }
@@ -123,9 +122,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="#prices">Prices</a></li>
-            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             <li class="nav-item"><a class="btn btn-sm btn-gold ml-lg-3" href="#contact">Book now</a></li>
           </ul>
         </div>
@@ -144,7 +141,66 @@
       </div>
     </header>
 
-    <div class="divider my-5"></div>
+    <div class="divider"></div>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-5">
+      <div class="container text-center">
+        <h2 class="brand-gold mb-4">Our Services</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5 class="text-leaf">Classic Manicure</h5>
+            <p>Includes nail shaping, cuticle care, massage, and polish — a timeless look for natural elegance.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5 class="text-leaf">Gel / Semi-Permanent</h5>
+            <p>Long-lasting glossy finish, carefully applied for durability and beauty up to 3 weeks.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5 class="text-leaf">Nail Art Design</h5>
+            <p>Subtle French tips, floral patterns, or bold statements — we bring your style to life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PRICES -->
+    <section id="prices" class="py-5 bg-white">
+      <div class="container text-center">
+        <h2 class="brand-gold mb-4">Price List</h2>
+        <table class="table table-bordered w-75 mx-auto">
+          <thead class="bg-gold text-white">
+            <tr><th>Service</th><th>Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Classic Manicure</td><td>€20</td></tr>
+            <tr><td>Gel / Semi-Permanent</td><td>€35</td></tr>
+            <tr><td>Nail Art (custom)</td><td>from €10</td></tr>
+            <tr><td>Removal & Nail Care</td><td>€15</td></tr>
+            <tr><td>Spa Manicure</td><td>€30</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="brand-gold mb-4">About AMB Nails</h2>
+        <p class="w-75 mx-auto">
+          At <strong>AMB Nails</strong>, we believe beauty begins with care.  
+          Our mission is to offer not just gorgeous nails, but a relaxing and hygienic experience every time.  
+          We work with high-quality, cruelty-free products and ensure every tool is sanitized to perfection.  
+          Each design is tailored to highlight your natural beauty and confidence. 💅
+        </p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
 
     <!-- GALLERY -->
     <section id="gallery" class="text-center">
@@ -159,8 +215,6 @@
         <img src="images/nails-7.jpg" alt="Nail Design 7">
         <img src="images/nails-8.jpg" alt="Nail Design 8">
       </div>
-
-      <!-- Facebook Button -->
       <div class="mt-4">
         <a href="https://www.facebook.com/profile.php?id=100063490276071" target="_blank" class="btn-facebook">
           <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" class="facebook-icon" alt="Facebook">
@@ -174,7 +228,7 @@
       <img src="" alt="Expanded view">
     </div>
 
-    <div class="divider my-5"></div>
+    <div class="divider"></div>
 
     <!-- CONTACT -->
     <section id="contact" class="py-5 text-center">
@@ -200,21 +254,16 @@
     <!-- JS -->
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
-
       const galleryImages = document.querySelectorAll('.gallery img');
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = lightbox.querySelector('img');
-
       galleryImages.forEach(img => {
         img.addEventListener('click', () => {
           lightbox.style.display = 'flex';
           lightboxImg.src = img.src;
         });
       });
-
-      lightbox.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-      });
+      lightbox.addEventListener('click', () => { lightbox.style.display = 'none'; });
     </script>
   </body>
 </html>
