@@ -138,4 +138,83 @@
         <div class="container">
           <h1 class="display-4 mb-3">Elegance in Every Detail</h1>
           <p class="lead mb-4">Welcome to <strong>AMB Nails</strong> — where art, care, and nature meet in perfect balance.</p>
-          <a href="#services" class="b
+          <a href="#services" class="btn btn-gold btn-lg mr-2">Explore Services</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg">Book an Appointment</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="divider my-5"></div>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="text-center">
+      <h2 class="mb-4 brand-gold">Gallery</h2>
+      <div class="gallery">
+        <img src="images/nails-1.jpg" alt="Nail Design 1">
+        <img src="images/nails-2.jpg" alt="Nail Design 2">
+        <img src="images/nails-3.jpg" alt="Nail Design 3">
+        <img src="images/nails-4.jpg" alt="Nail Design 4">
+        <img src="images/nails-5.jpg" alt="Nail Design 5">
+        <img src="images/nails-6.jpg" alt="Nail Design 6">
+        <img src="images/nails-7.jpg" alt="Nail Design 7">
+        <img src="images/nails-8.jpg" alt="Nail Design 8">
+      </div>
+
+      <!-- Facebook Button -->
+      <div class="mt-4">
+        <a href="https://www.facebook.com/profile.php?id=100063490276071" target="_blank" class="btn-facebook">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" class="facebook-icon" alt="Facebook">
+          See more on Facebook
+        </a>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+      <img src="" alt="Expanded view">
+    </div>
+
+    <div class="divider my-5"></div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5 text-center">
+      <div class="container">
+        <h2 class="brand-gold mb-3">Book an Appointment</h2>
+        <p class="mb-2">AMB Nails Studio<br>123 Elegant Street, London</p>
+        <p class="mb-0">Email: <strong>alinadiac91@gmail.com</strong></p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-2 mb-md-0">&copy; <span id="year"></span> AMB Nails. All rights reserved.</p>
+        <div>
+          <a href="https://www.facebook.com/profile.php?id=100063490276071" target="_blank" class="mr-3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" width="18" alt="Facebook"> Facebook
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const galleryImages = document.querySelectorAll('.gallery img');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+
+      galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'flex';
+          lightboxImg.src = img.src;
+        });
+      });
+
+      lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+      });
+    </script>
+  </body>
+</html>
