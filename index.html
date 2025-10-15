@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>AMB Nails</title>
 
-    <!-- Bootstrap 4 CSS (CDN) -->
+    <!-- Bootstrap 4 CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- Custom styles -->
     <style>
       :root {
         --gold:#C9A227;
@@ -33,31 +32,8 @@
         background: rgba(0,0,0,0.5);
         padding: 5rem 0;
       }
-      .service-card{ border: none; box-shadow: 0 12px 24px rgba(0,0,0,0.06); border-radius: .75rem; }
       .divider { height: 2px; background: linear-gradient(to right, var(--gold), var(--leaf)); opacity:.3; }
       .footer{ background:#f9fafb; border-top:1px solid rgba(31,41,55,0.08); }
-      .navbar-brand span{ font-weight:700; letter-spacing:.5px; }
-      .rounded-xl{ border-radius: 1rem; }
-      .shadow-soft{ box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
-      .form-control:focus{ border-color: var(--leaf); box-shadow: 0 0 0 .2rem rgba(46,125,50,.2); }
-      a{ color: var(--leaf); }
-      a:hover{ color: #215c25; text-decoration:none; }
-      table tr td:first-child{ font-weight:500; }
-
-      /* --- Gallery Section --- */
-      #gallery {
-        text-align: center;
-        padding: 40px 20px;
-        background-color: #fff;
-      }
-
-      #gallery h2 {
-        font-size: 2em;
-        color: var(--gold);
-        margin-bottom: 25px;
-        letter-spacing: 1px;
-      }
-
       .gallery {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -65,7 +41,6 @@
         justify-items: center;
         padding: 10px 0;
       }
-
       .gallery img {
         width: 260px;
         height: 260px;
@@ -76,46 +51,45 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
       }
-
       .gallery img:hover {
         transform: scale(1.05);
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
       }
-
-      /* Lightbox overlay */
       #lightbox {
         display: none;
         position: fixed;
         z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.85);
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.85);
         justify-content: center;
         align-items: center;
       }
-
       #lightbox img {
-        max-width: 90%;
-        max-height: 85%;
+        max-width: 90%; max-height: 85%;
         border-radius: 10px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
       }
-
-      #lightbox:active {
-        display: none;
-      }
-
       @media (max-width: 600px) {
-        .gallery {
-          grid-template-columns: 1fr;
-        }
-
-        .gallery img {
-          width: 90%;
-          height: auto;
-        }
+        .gallery { grid-template-columns: 1fr; }
+        .gallery img { width: 90%; height: auto; }
+      }
+      .btn-facebook {
+        background-color: var(--gold);
+        color: white;
+        font-weight: 500;
+        border-radius: 8px;
+        padding: 10px 20px;
+        transition: 0.3s;
+      }
+      .btn-facebook:hover {
+        filter: brightness(0.9);
+        text-decoration: none;
+        color: white;
+      }
+      .facebook-icon {
+        width: 20px;
+        margin-right: 8px;
+        vertical-align: middle;
       }
     </style>
   </head>
@@ -125,25 +99,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="mr-2">
-            <circle cx="12" cy="12" r="10" stroke="#2E7D32" stroke-width="2"></circle>
-            <path d="M7 13c3 2 7 2 10 0" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/>
-          </svg>
           <span class="brand-gold">AMB</span>&nbsp;<span class="text-leaf">Nails</span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMain">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMain">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#prices">Prices</a></li>
-            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item"><a class="btn btn-sm btn-gold ml-lg-3" href="#contact">Book now</a></li>
-          </ul>
-        </div>
       </div>
     </nav>
 
@@ -153,8 +110,6 @@
         <div class="container">
           <h1 class="display-4 mb-3">Elegance in Every Detail</h1>
           <p class="lead mb-4">Welcome to <strong>AMB Nails</strong> — where art, care, and nature meet in perfect balance.</p>
-          <a href="#services" class="btn btn-gold btn-lg mr-2">Explore Services</a>
-          <a href="#contact" class="btn btn-outline-light btn-lg">Book an Appointment</a>
         </div>
       </div>
     </header>
@@ -162,8 +117,8 @@
     <div class="divider my-5"></div>
 
     <!-- GALLERY -->
-    <section id="gallery">
-      <h2>Gallery</h2>
+    <section id="gallery" class="text-center">
+      <h2 class="mb-4 brand-gold">Gallery</h2>
       <div class="gallery">
         <img src="images/nails-1.jpg" alt="Nail Design 1">
         <img src="images/nails-2.jpg" alt="Nail Design 2">
@@ -173,6 +128,14 @@
         <img src="images/nails-6.jpg" alt="Nail Design 6">
         <img src="images/nails-7.jpg" alt="Nail Design 7">
         <img src="images/nails-8.jpg" alt="Nail Design 8">
+      </div>
+
+      <!-- Facebook Button -->
+      <div class="mt-4">
+        <a href="https://www.facebook.com/profile.php?id=100063490276071" target="_blank" class="btn-facebook">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" class="facebook-icon" alt="Facebook">
+          See more on Facebook
+        </a>
       </div>
     </section>
 
@@ -184,41 +147,10 @@
     <div class="divider my-5"></div>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-5 text-center">
       <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="mb-3"><span class="brand-gold">Book</span> an Appointment</h2>
-          <p class="text-muted mb-0">Send us a message — we’ll get back with available slots.</p>
-        </div>
-        <div class="row">
-          <div class="col-md-7 mb-4 mb-md-0">
-            <form>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="name">Full name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Your name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="What service are you interested in?" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-gold btn-lg">Send request</button>
-            </form>
-          </div>
-          <div class="col-md-5">
-            <div class="bg-white rounded-xl p-4 shadow-soft h-100">
-              <h5 class="text-leaf">Studio details</h5>
-              <p class="mb-2">AMB Nails Studio<br>123 Elegant Street, London</p>
-              <p class="mb-2">Mon–Sat: 09:00–19:00</p>
-              <p class="mb-0">Email: alinadiac91@gmail.com</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="brand-gold mb-3">Book an Appointment</h2>
+        <p>Email: <strong>alinadiac91@gmail.com</strong></p>
       </div>
     </section>
 
@@ -227,21 +159,17 @@
       <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <p class="mb-2 mb-md-0">&copy; <span id="year"></span> AMB Nails. All rights reserved.</p>
         <div>
-          <a href="#" class="mr-3">Instagram</a>
-          <a href="#" class="mr-3">Facebook</a>
-          <a href="#">Terms</a>
+          <a href="https://www.facebook.com/profile.php?id=100063490276071" target="_blank" class="mr-3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" width="18" alt="Facebook"> Facebook
+          </a>
         </div>
       </div>
     </footer>
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      // Lightbox functionality
       const galleryImages = document.querySelectorAll('.gallery img');
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = lightbox.querySelector('img');
