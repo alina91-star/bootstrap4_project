@@ -74,11 +74,37 @@
         border: 5px solid #fff;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
       }
 
       .gallery img:hover {
         transform: scale(1.05);
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+      }
+
+      /* Lightbox overlay */
+      #lightbox {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+      }
+
+      #lightbox img {
+        max-width: 90%;
+        max-height: 85%;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      #lightbox:active {
+        display: none;
       }
 
       @media (max-width: 600px) {
@@ -150,6 +176,11 @@
       </div>
     </section>
 
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+      <img src="" alt="Expanded view">
+    </div>
+
     <div class="divider my-5"></div>
 
     <!-- CONTACT -->
@@ -203,12 +234,28 @@
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Lightbox functionality
+      const galleryImages = document.querySelectorAll('.gallery img');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+
+      galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'flex';
+          lightboxImg.src = img.src;
+        });
+      });
+
+      lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+      });
     </script>
   </body>
 </html>
