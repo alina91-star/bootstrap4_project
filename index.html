@@ -71,7 +71,8 @@
   </head>
 
   <body>
-    <!-- ---------- NAVBAR ---------- -->
+    <!-- ---------- NAVBAR (Bootstrap component) ---------- -->
+    <!-- The navbar provides responsive navigation links for the sections of the website -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -93,8 +94,8 @@
       </div>
     </nav>
 
-    <!-- ---------- CAROUSEL (Bootstrap) ---------- -->
-    <!-- Carousel replaces hero section -->
+    <!-- ---------- CAROUSEL (Bootstrap component) ---------- -->
+    <!-- The carousel showcases featured nail images with captions -->
     <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
       <ol class="carousel-indicators">
         <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -134,7 +135,7 @@
 
     <div class="divider"></div>
 
-    <!-- ---------- SERVICES ---------- -->
+    <!-- ---------- SERVICES SECTION ---------- -->
     <section id="services" class="py-5 text-center">
       <div class="container">
         <h2 class="brand-gold mb-4">Our Services</h2>
@@ -157,7 +158,8 @@
 
     <div class="divider"></div>
 
-    <!-- ---------- PRICE LIST ---------- -->
+    <!-- ---------- PRICE LIST (Bootstrap table) ---------- -->
+    <!-- This section uses a Bootstrap table for layout and styling -->
     <section id="prices" class="py-5 bg-white text-center">
       <div class="container">
         <h2 class="brand-gold mb-4">Price List</h2>
@@ -178,7 +180,8 @@
 
     <div class="divider"></div>
 
-    <!-- ---------- SPECIAL NAIL DEALS ---------- -->
+    <!-- ---------- SPECIAL OFFERS (Bootstrap cards) ---------- -->
+    <!-- Bootstrap cards are used here to present special deals -->
     <section id="offers" class="py-5 bg-light text-center">
       <div class="container">
         <h2 class="brand-gold mb-4">Special Nail Deals</h2>
@@ -216,7 +219,7 @@
           </div>
         </div>
 
-        <!-- ---------- SUBSCRIBE FORM ---------- -->
+        <!-- ---------- SUBSCRIBE FORM (Bootstrap form component) ---------- -->
         <div class="mt-5">
           <h4 class="text-leaf mb-3">Subscribe for Exclusive Deals</h4>
           <form class="w-75 mx-auto">
@@ -235,7 +238,7 @@
 
     <div class="divider"></div>
 
-    <!-- ---------- GALLERY ---------- -->
+    <!-- ---------- GALLERY SECTION ---------- -->
     <section id="gallery" class="text-center">
       <h2 class="brand-gold mb-4">Gallery</h2>
       <div class="gallery">
@@ -246,12 +249,13 @@
       </div>
     </section>
 
-    <!-- Lightbox Modal -->
+    <!-- ---------- LIGHTBOX MODAL ---------- -->
+    <!-- Custom JavaScript-based lightbox for enlarging images -->
     <div id="lightbox"><img src="" alt="Expanded view"></div>
 
     <div class="divider"></div>
 
-    <!-- ---------- CONTACT ---------- -->
+    <!-- ---------- CONTACT SECTION ---------- -->
     <section id="contact" class="py-5 text-center">
       <div class="container">
         <h2 class="brand-gold mb-3">Contact Us</h2>
@@ -267,16 +271,16 @@
       </div>
     </footer>
 
-    <!-- ---------- BOOTSTRAP JS ---------- -->
+    <!-- ---------- BOOTSTRAP JS SCRIPTS ---------- -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-      // Show current year in footer
+      // Displays current year in footer
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      // Lightbox functionality
+      // Simple lightbox functionality for gallery images
       const galleryImages = document.querySelectorAll('.gallery img');
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = lightbox.querySelector('img');
